@@ -101,3 +101,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
                 ro.build.shutdown_timeout=6 \
                 persist.enable_task_snapshots=false \
                 ro.vendor.frameratelock=true
+
+# boblight
+$(call inherit-product-if-exists, $(LOCAL_PATH)/boblight.mk)
