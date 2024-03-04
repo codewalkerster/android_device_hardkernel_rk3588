@@ -12,7 +12,7 @@ BOOT_OLD=$1
 BOOT_NEW=boot.img
 
 TOOL=./rkbin/tools/resource_tool
-IMAGES=./device/rockchip/rk3588/rk3588m_s/logo/
+IMAGES=./device/hardkernel/rk3588/rk3588m_s/logo/
 TMP_DIR=.resource_tmp
 TMP_DIR2=.boot_tmp
 

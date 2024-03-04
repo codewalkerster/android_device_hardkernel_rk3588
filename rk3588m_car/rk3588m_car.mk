@@ -20,11 +20,11 @@ TARGET_BOARD_PLATFORM_PRODUCT := car
 PRODUCT_SHIPPING_API_LEVEL := 31
 PRODUCT_DTBO_TEMPLATE := $(LOCAL_PATH)/dt-overlay.in
 
-include device/rockchip/common/build/rockchip/DynamicPartitions.mk
-include device/rockchip/rk3588/rk3588m_car/BoardConfig.mk
-include device/rockchip/common/BoardConfig.mk
-$(call inherit-product, device/rockchip/rk3588/device.mk)
-$(call inherit-product, device/rockchip/common/device.mk)
+include device/hardkernel/common/build/rockchip/DynamicPartitions.mk
+include device/hardkernel/rk3588/rk3588m_car/BoardConfig.mk
+include device/hardkernel/common/BoardConfig.mk
+$(call inherit-product, device/hardkernel/rk3588/device.mk)
+$(call inherit-product, device/hardkernel/common/device.mk)
 $(call inherit-product, frameworks/native/build/tablet-10in-xhdpi-2048-dalvik-heap.mk)
 $(call inherit-product, packages/apps/Camera360/camera360_etc.mk)
 DEVICE_MANIFEST_FILE := $(LOCAL_PATH)/manifest.xml
