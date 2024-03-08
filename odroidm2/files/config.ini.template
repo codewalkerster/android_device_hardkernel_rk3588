@@ -1,0 +1,77 @@
+[generic]
+###########################
+# Max CPU frequency sets
+# 408 600 816 1104 1416 1608 1800 1992
+cpu_max_freq="1992"
+
+###########################
+# Available CPU governors
+# conservative ondemand userspace powersave interactive performance schedutil
+cpu_governor="performance"
+
+###########################
+# Max GPU frequency sets
+# 800 700 600 400 300 200
+gpu_max_freq="800"
+
+###########################
+# Available GPU governors
+# dmc_ondemand venc_ondemand userspace powersave performance simple_ondemand
+gpu_governor="performance"
+
+heartbeat="1"
+
+overlays="i2c0 i2c1 spi0 uart0 pwm_1 pwm_2 pwm_9"
+overlays_resize=16384
+
+###########################
+# ignore hpd
+# user_def_args="disablehpd=true"
+
+###########################
+# Disable VU7
+# user_def_args="disable_vu7=true"
+
+###########################
+# vu8m orientation
+# ex) default portrait
+# The screen is portrait and the HDMI port is to the top of screen.
+# ro.surface_flinger.primary_display_orientation=ORIENTATION_0
+# user_def_args="orientation=0"
+#
+# ex) default landscape
+# The screen is landscape and the HDMI port is to the right of screen.
+# ro.surface_flinger.primary_display_orientation=ORIENTATION_270
+# user_def_args="orientation=5"
+#
+# ex) reverse portrait
+# The screen is portrait and the HDMI port is to the left of screen.
+# ro.surface_flinger.primary_display_orientation=ORIENTATION_180
+# user_def_args="orientation=4"
+#
+# ex) reverse landscape
+# The screen is landscape and the HDMI port is to the left of screen.
+# ro.surface_flinger.primary_display_orientation=ORIENTATION_90
+# user_def_args="orientation=3"
+
+###########################
+# flipped touch screen x,y
+# user_def_args="touch_flip_x=false"
+# user_def_args="touch_flip_y=false"
+
+###########################
+# test mt screen
+# user_def_args="test_mt_vid="0000" test_mt_pid="0000""
+
+###########################
+# Prevent sleep
+# user_def_args="prevent_sleep=true"
+
+###########################
+# Apply custom edid
+# user_def_args="drm.edid_firmware=HDMI-A-1:edid/edid.bin"
+
+user_def_args=""
+
+[display_vu8m]
+lcd_density=210
