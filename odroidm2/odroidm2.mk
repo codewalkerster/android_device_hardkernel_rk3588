@@ -17,7 +17,7 @@
 # First lunching is T, api_level is 33
 PRODUCT_SHIPPING_API_LEVEL := 33
 
-PRODUCT_DTB_TARGET := kernel-5.10/arch/arm64/boot/dts/rockchip/rk3588s-odroid-m2.dtb
+PRODUCT_DTB_TARGET := kernel-5.10/arch/arm64/boot/dts/rockchip/rk3588s-odroid-m2-android.dtb
 PRODUCT_DTBO_TARGET := kernel-5.10/arch/arm64/boot/dts/rockchip/overlays/odroidm2/*.dtbo
 
 PRODUCT_SDMMC_DEVICE := fe2c0000.mmc
@@ -38,12 +38,12 @@ PRODUCT_NAME := odroidm2
 PRODUCT_DEVICE := odroidm2
 PRODUCT_BRAND := hardkernel
 PRODUCT_MODEL := odroidm2
-PRODUCT_MANUFACTURER := rockchip
-PRODUCT_AAPT_PREF_CONFIG := mdpi
+PRODUCT_MANUFACTURER := hardkernel
+PRODUCT_AAPT_PREF_CONFIG := xhdpi
 #
 ## add Rockchip properties
 #
-PRODUCT_PROPERTY_OVERRIDES += ro.sf.lcd_density=280
+PRODUCT_PROPERTY_OVERRIDES += ro.sf.lcd_density=320
 PRODUCT_PROPERTY_OVERRIDES += ro.wifi.sleep.power.down=true
 PRODUCT_PROPERTY_OVERRIDES += persist.wifi.sleep.delay.ms=0
 PRODUCT_PROPERTY_OVERRIDES += persist.bt.power.down=true
@@ -51,3 +51,33 @@ PRODUCT_PROPERTY_OVERRIDES += vendor.hwc.device.primary=DSI
 PRODUCT_PROPERTY_OVERRIDES += vendor.hwc.device.extend=HDMI-A,eDP
 #PRODUCT_PROPERTY_OVERRIDES += vendor.hwc.device.primary=HDMI-A,eDP
 #PRODUCT_PROPERTY_OVERRIDES += vendor.hwc.device.extend=DSI
+
+#
+# ODROID-M2 Files
+#
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/files/config.ini.template:$(TARGET_COPY_OUT_VENDOR)/etc/config.ini.template
+
+ifeq ($(TARGET_BUILD_VARIANT),eng)
+PRODUCT_PACKAGES += \
+    AndroidTerm \
+
+PRODUCT_PACKAGES += \
+    SprUsr
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/../../proprietary/bin/phh-su:$(TARGET_COPY_OUT_SYSTEM)/bin/phh-su \
+    $(LOCAL_PATH)/../../proprietary/bin/su:$(TARGET_COPY_OUT_SYSTEM)/bin/su \
+    $(LOCAL_PATH)/../../proprietary/etc/init/su.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/su.rc
+endif
+
+ifeq ($(TARGET_BUILD_VARIANT),userdebug)
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.url.official=https://dn.odroid.com/RK3588/ODROID-M2/Android/13/userdebug/ \
+    ro.url.mirror=https://www.odroid.in/mirror/dn.odroid.com/RK3588/ODROID-M2/Android/13/userdebug/
+else
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.url.official=https://dn.odroid.com/RK3588/ODROID-M2/Android/13/ \
+    ro.url.mirror=https://www.odroid.in/mirror/dn.odroid.com/RK3588/ODROID-M2/Android/13/
+endif

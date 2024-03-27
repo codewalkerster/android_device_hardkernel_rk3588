@@ -21,8 +21,7 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a76
 PRODUCT_UBOOT_CONFIG ?= rk3588
 PRODUCT_KERNEL_ARCH ?= arm64
 PRODUCT_KERNEL_DTS ?= rk3588-evb1-lp4-v10
-#PRODUCT_KERNEL_CONFIG ?= rockchip_defconfig pcie_wifi.config
-PRODUCT_KERNEL_CONFIG ?= rockchip_defconfig
+PRODUCT_KERNEL_CONFIG ?= rockchip_defconfig pcie_wifi.config
 
 #BOARD_AVB_ENABLE := true
 # used for fstab_generator, sdmmc controller address
@@ -128,4 +127,4 @@ BOARD_ROCKCHIP_TRUST_MERGE_TO_UBOOT := true
 BOARD_BASEPARAMETER_SUPPORT := true
 
 #pcie ethernet
-PRODUCT_HAVE_PCIE_ETHERNET := true
+PRODUCT_HAVE_PCIE_ETHERNET := false
