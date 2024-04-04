@@ -25,6 +25,7 @@ PRODUCT_SDMMC_DEVICE := fe2c0000.mmc
 include device/hardkernel/common/build/rockchip/DynamicPartitions.mk
 include device/hardkernel/rk3588/odroidm2/BoardConfig.mk
 include device/hardkernel/common/BoardConfig.mk
+
 $(call inherit-product, device/hardkernel/rk3588/device.mk)
 $(call inherit-product, device/hardkernel/common/device.mk)
 $(call inherit-product, frameworks/native/build/tablet-10in-xhdpi-2048-dalvik-heap.mk)
@@ -47,10 +48,12 @@ PRODUCT_PROPERTY_OVERRIDES += ro.sf.lcd_density=320
 PRODUCT_PROPERTY_OVERRIDES += ro.wifi.sleep.power.down=true
 PRODUCT_PROPERTY_OVERRIDES += persist.wifi.sleep.delay.ms=0
 PRODUCT_PROPERTY_OVERRIDES += persist.bt.power.down=true
+
+#
+# Set the hwc display target
+#
 PRODUCT_PROPERTY_OVERRIDES += vendor.hwc.device.primary=DSI
 PRODUCT_PROPERTY_OVERRIDES += vendor.hwc.device.extend=HDMI-A,eDP
-#PRODUCT_PROPERTY_OVERRIDES += vendor.hwc.device.primary=HDMI-A,eDP
-#PRODUCT_PROPERTY_OVERRIDES += vendor.hwc.device.extend=DSI
 
 #
 # ODROID-M2 Files

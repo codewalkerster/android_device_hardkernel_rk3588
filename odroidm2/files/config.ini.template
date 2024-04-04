@@ -32,7 +32,6 @@ npu_max_freq="800"
 # dmc_ondemand venc_ondemand userspace powersave performance simple_ondemand
 npu_governor="performance"
 
-
 heartbeat="1"
 
 overlays="i2c0 i2c1 spi0 uart0 pwm_1 pwm_2 pwm_9"
