@@ -62,7 +62,7 @@ PRODUCT_PROPERTY_OVERRIDES += vendor.hwc.device.extend=HDMI-A,eDP
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/files/config.ini.template:$(TARGET_COPY_OUT_VENDOR)/etc/config.ini.template
 
-ifeq ($(TARGET_BUILD_VARIANT),eng)
+ifeq ($(TARGET_BUILD_VARIANT),userdebug)
 PRODUCT_PACKAGES += \
     AndroidTerm \
 
@@ -75,12 +75,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/../../proprietary/etc/init/su.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/su.rc
 endif
 
-ifeq ($(TARGET_BUILD_VARIANT),userdebug)
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.url.official=https://dn.odroid.com/RK3588/ODROID-M2/Android/13/userdebug/ \
-    ro.url.mirror=https://www.odroid.in/mirror/dn.odroid.com/RK3588/ODROID-M2/Android/13/userdebug/
-else
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.url.official=https://dn.odroid.com/RK3588/ODROID-M2/Android/13/ \
     ro.url.mirror=https://www.odroid.in/mirror/dn.odroid.com/RK3588/ODROID-M2/Android/13/
-endif

@@ -39,7 +39,6 @@ COMMON_LUNCH_CHOICES := \
     rk3588m_s-user \
     rk3588m_car-userdebug \
     rk3588m_car-user \
-    odroidm2-eng \
     odroidm2-userdebug \
     odroidm2-user
 
