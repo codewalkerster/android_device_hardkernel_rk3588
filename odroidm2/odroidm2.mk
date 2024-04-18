@@ -62,7 +62,7 @@ PRODUCT_PROPERTY_OVERRIDES += vendor.hwc.device.extend=HDMI-A,eDP
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/files/config.ini.template:$(TARGET_COPY_OUT_VENDOR)/etc/config.ini.template
 
-ifeq ($(TARGET_BUILD_VARIANT),userdebug)
+ifneq (,$(filter userdebug eng,$(TARGET_BUILD_VARIANT)))
 PRODUCT_PACKAGES += \
     AndroidTerm \
 
