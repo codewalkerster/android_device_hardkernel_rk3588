@@ -1,7 +1,7 @@
 [generic]
 ###########################
 # Max CPU frequency sets
-little_cpu_max_freq="1992"
+little_cpu_max_freq="1800"
 middle_cpu_max_freq="2016"
 big_cpu_max_freq="2208"
 
