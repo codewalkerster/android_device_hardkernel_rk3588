@@ -44,3 +44,5 @@ BOARD_VENDOR_KERNEL_MODULES += \
     $(vendor_lkm_dir)/btusb.ko
 
 BUILD_BROKEN_DUP_RULES := true
+
+BOARD_SUPPORT_MULTIAUDIO := true
