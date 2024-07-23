@@ -21,5 +21,10 @@
 #define BTA_DM_COD {0x1A, 0x01, 0x10}
 #define DISABLE_WBS TRUE
 #define ESCO_DATA_PATH_PCM 6
-#endif
 
+/* Odroid custom option */
+#define SUPERVISION_TIMEOUT FALSE
+#define BLE_ADV_FILTER FALSE
+
+#define BLE_VND_INCLUDED FALSE
+#endif
