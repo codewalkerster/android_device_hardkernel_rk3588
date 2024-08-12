@@ -76,5 +76,5 @@ PRODUCT_COPY_FILES += \
 endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.url.official=https://dn.odroid.com/RK3588/ODROID-M2/Android/13/ \
-    ro.url.mirror=https://www.odroid.in/mirror/dn.odroid.com/RK3588/ODROID-M2/Android/13/
+    ro.url.official=https://dn.odroid.com/RK3588S2/ODROID-M2/Android/13/ \
+    ro.url.mirror=https://www.odroid.in/mirror/dn.odroid.com/RK3588S2/ODROID-M2/Android/13/
