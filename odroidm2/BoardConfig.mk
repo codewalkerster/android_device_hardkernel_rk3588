@@ -41,7 +41,15 @@ BOARD_VENDOR_KERNEL_MODULES += \
     $(vendor_lkm_dir)/8812au.ko \
     $(vendor_lkm_dir)/btbcm.ko \
     $(vendor_lkm_dir)/btrtl.ko \
-    $(vendor_lkm_dir)/btusb.ko
+    $(vendor_lkm_dir)/btusb.ko \
+    $(vendor_lkm_dir)/mt76.ko \
+    $(vendor_lkm_dir)/mt76x2-common.ko \
+    $(vendor_lkm_dir)/mt76x2u.ko \
+    $(vendor_lkm_dir)/mt76x02-usb.ko \
+    $(vendor_lkm_dir)/mt76x0-common.ko \
+    $(vendor_lkm_dir)/mt76x0u.ko \
+    $(vendor_lkm_dir)/mt76x02-lib.ko \
+    $(vendor_lkm_dir)/mt76-usb.ko
 
 BUILD_BROKEN_DUP_RULES := true
 
